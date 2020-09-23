@@ -1,0 +1,22 @@
+from Atleta import Atleta   #from ficheiro.py import Class
+
+class AtletaProfissional(Atleta):
+
+    percentagem_Premios = 0.20
+
+    def __init__(self,nome,numidenticivil,genero,idade,atividade,fcr,premios,salariofixo):
+        self.salariofixo = salariofixo
+        super().__init__(nome,numidenticivil,genero,idade,atividade,fcr,premios)
+
+    def salarioPremios(self):
+        return self.premios * self.percentagem_Premios
+    
+    def salarioMensal(self):
+        return self.salariofixo + self.salarioPremios()
+
+
+if __name__== "__main__":
+    atletax = AtletaProfissional("Jonas","123456789","Masculino",25,"Corrida",56,1000,500)
+
+    print(atletax.salarioPremios())
+    print(atletax.salarioMensal())
