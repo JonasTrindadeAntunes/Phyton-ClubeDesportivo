@@ -1,6 +1,6 @@
 from AtletaNaoProfissional import AtletaNaoProfissional     #from ficheiro.py import Class
 
-class SemiProfisional(AtletaNaoProfissional):
+class SemiProfissional(AtletaNaoProfissional):
 
     #salario fixo de um Atleta semiprofissional
     salarioFixo = 1000
@@ -19,8 +19,8 @@ class SemiProfisional(AtletaNaoProfissional):
 if __name__ == "__main__":
     #atletax = Atleta("Jonas","123456789","Masculino",25,"Corrida",56,1300)
 
-    atletax = SemiProfisional("Jonas","123456789","Masculino",25,"Corrida",56,1300,12)
-    atletay = SemiProfisional("Jon","1236789","Masculino",22,"Corrida",57,20,22)
+    atletax = SemiProfissional("Jonas","123456789","Masculino",25,"Corrida",56,1300,12)
+    atletay = SemiProfissional("Jon","1236789","Masculino",22,"Corrida",57,20,22)
 
     print("atletax")
     print(atletax.salarioFixo)
