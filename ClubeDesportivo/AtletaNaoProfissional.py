@@ -42,6 +42,10 @@ class AtletaNaoProfissional(Atleta):
             return 0
             
         
+    def __repr__(self):
+        return (super().__repr__() + f'antiguidade: {self.antiguidade!r}')
+
+
 if __name__ == "__main__":
     atletax = AtletaNaoProfissional("Jonas","123456789","Masculino",25,"Corrida",56,1300,12)
 

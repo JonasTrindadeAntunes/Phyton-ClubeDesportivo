@@ -14,6 +14,9 @@ class AtletaProfissional(Atleta):
     def salarioMensal(self):
         return self.salariofixo + self.salarioPremios()
 
+    def __repr__(self):
+        return (super().__repr__() + f'salariofixo: {self.salariofixo!r}')
+                    
 
 if __name__== "__main__":
     atletax = AtletaProfissional("Jonas","123456789","Masculino",25,"Corrida",56,1000,500)
