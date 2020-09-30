@@ -8,12 +8,13 @@ class Amador(AtletaNaoProfissional):
     # O valor desta percentagem pode ser atualizado, e é igual para todos os atletas
     # percentagem aplicada aos premios do atleta no mes
     percentagem_variavel = 0.07             
-     
-    n_amadores = 0
+    
+    NUMERO_AMADORES = 0
+    
 
     def __init__(self,nome,numidenticivil,genero,idade,atividade,fcr,premios,antiguidade):
         super().__init__(nome,numidenticivil,genero,idade,atividade,fcr,premios,antiguidade)
-        self.n_amadores = self.n_amadores + 1
+        self.NUMERO_AMADORES += 1
 
     # retorna a parcela ganha dos premios pelo atleta de acordo com a com uma percentagem
     def salarioPremios(self):

@@ -5,11 +5,11 @@ class SemiProfissional(AtletaNaoProfissional):
     #salario fixo de um Atleta semiprofissional
     salarioFixo = 1000
 
-    n_semiprofissionais = 0
+    NUMERO_SEMIPROFISSIONAIS = 0
 
     def __init__(self,nome,numidenticivil,genero,idade,atividade,fcr,premios,antiguidade):
         super().__init__(nome,numidenticivil,genero,idade,atividade,fcr,premios,antiguidade)
-        self.n_semiprofissionais = self.n_semiprofissionais + 1
+        self.NUMERO_SEMIPROFISSIONAIS += + 1
 
     
     def salarioMensal(self):

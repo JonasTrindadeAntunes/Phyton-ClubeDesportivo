@@ -4,9 +4,12 @@ class AtletaProfissional(Atleta):
 
     percentagem_Premios = 0.20
 
+    NUMERO_PROFISSIONAIS = 0
+
     def __init__(self,nome,numidenticivil,genero,idade,atividade,fcr,premios,salariofixo):
         self.salariofixo = salariofixo
         super().__init__(nome,numidenticivil,genero,idade,atividade,fcr,premios)
+        self.NUMERO_PROFISSIONAIS += 1
 
     def salarioPremios(self):
         return self.premios * self.percentagem_Premios

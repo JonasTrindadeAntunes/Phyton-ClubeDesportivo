@@ -60,13 +60,19 @@ if __name__ == "__main__":
         if isinstance(x,SemiProfissional):
             print("nome:{} FCM:{} gorduraFCT:{} cardioFCT:{}".format(x.nome,x.FCM(),x.gorduraFCT(),x.cardioFCT()))
                  
+    ##alinea cii-obter o nome e o valor a pagar de cada atleta
+    for x in clube.list_atletas:
+        print("nome:{} salarioMensal:{} ".format(x.nome,x.salarioMensal()))
 
 
+    #alinea d-apresentação das quantidades de instâncias de atletas amadores e profissionais criadas, sem percorrer o contentor
+    print("Instancias atletas Amadores:{}".format(Amador.NUMERO_AMADORES))
+    print("Instancias atletas Profissionais:{}".format(AtletaProfissional.NUMERO_PROFISSIONAIS))       
 
 
-
-
-
+    #alinea e-cálculo e apresentação do valor total a pagar a cada tipo de atleta 
+    #(profissional, semiprofissional e amador), percorrendo apenas uma vez o contentor.
+    #Deve ser também calculado e apresentado o valor total a pagar a todos os atletas. 
 
 
 
