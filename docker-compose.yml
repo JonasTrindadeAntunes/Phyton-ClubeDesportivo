@@ -1,0 +1,27 @@
+version: "3.7"
+
+services:
+  db:
+    image: mysql
+    command: "--character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_520_ci"
+    restart: always
+    volumes:
+      - "./mysql/schema:/docker-entrypoint-initdb.d"
+      - "mysql_data:/var/lib/mysql"
+    environment:
+      - MYSQL_DATABASE=example_db
+      - MYSQL_ROOT_PASSWORD=example_pw
+      - MYSQL_USER=example_user
+      - MYSQL_PASSWORD=example_pw
+      - MYSQL_HOST=example_host
+    ports:
+      - "3306:3306"
+
+  app:
+    build:
+      context: ./app
+    volumes:
+      - "./app:/usr/src/app"
+
+volumes:
+  mysql_data:
