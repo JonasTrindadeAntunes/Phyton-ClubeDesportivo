@@ -21,7 +21,7 @@ services:
     build:
       context: ./app
     volumes:
-      - "./app:/usr/src/app"
+      - "./app:/app"
 
 volumes:
   mysql_data:
